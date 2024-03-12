@@ -1,0 +1,38 @@
+### Recuperar todas las clientes
+GET http://localhost:3245/clientes
+
+### Recuperar una clientes por documento
+GET http://localhost:3245/clientes/16561170
+
+### Recuperar todas los clientes por un género
+GET http://localhost:3245/clientes/F
+
+### Crear un cliente con POST
+POST http://localhost:3245/clientes
+Content-Type: application/json
+
+{
+  "sql": "SELECT * FROM clientes",
+  "tipoDocumento": "CC",
+    "documento": "3356145",
+    "primerNombre": "Romario",
+    "segundoNombre": "Lule",
+    "primerApellido": "",
+    "segundoApellido": "",
+    "ingresos": 1200000,
+    "ciudadUbicacion": "Cali",
+    "telefono": "11111111",
+    "edad": 42,
+    "genero": [
+      "M"
+    ],
+    "email": "hebert@gmail.com"
+}
+
+### Actualizar un cliente
+PATCH http://localhost:3245/clientes/dcdd0fad-a94c-4810-8acc-5f108d3b18c17
+Content-Type: application/json
+
+{
+  "edad": 38
+}
