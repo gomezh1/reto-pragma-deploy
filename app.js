@@ -28,11 +28,6 @@ app.use(cors({
 }))
 app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
 
-// métodos normales: GET/HEAD/POST
-// métodos complejos: PUT/PATCH/DELETE
-
-// CORS PRE-Flight
-// OPTIONS
 
 // Todos los recursos que sean clientes se identifica con /clientes
 app.get('/clientes', (req, res) => {

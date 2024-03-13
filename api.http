@@ -12,7 +12,6 @@ POST http://localhost:3245/clientes
 Content-Type: application/json
 
 {
-  "sql": "SELECT * FROM clientes",
   "tipoDocumento": "CC",
     "documento": "3356145",
     "primerNombre": "Romario",
@@ -23,9 +22,7 @@ Content-Type: application/json
     "ciudadUbicacion": "Cali",
     "telefono": "11111111",
     "edad": 42,
-    "genero": [
-      "M"
-    ],
+    "genero": "M",
     "email": "hebert@gmail.com"
 }
 
@@ -34,5 +31,5 @@ PATCH http://localhost:3245/clientes/dcdd0fad-a94c-4810-8acc-5f108d3b18c17
 Content-Type: application/json
 
 {
-  "edad": 38
+  "": 42
 }
