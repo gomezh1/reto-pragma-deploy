@@ -5,11 +5,12 @@ import cors from 'cors'
 import clientes from './clientes.json' with {type:'json'}
 import { validatecliente, validatePartialcliente } from './schemas/clientes.js'
 
-import {createRequire} from 'node:module'
+/*import {createRequire} from 'node:module'
 import { assert } from 'node:console'
 import {readJSON} from './utils.js'
+
 const require = createRequire(import.meta.url)
-const clientes = readJSON('./clientes.json')
+const clientes = readJSON('./clientes.json')*/
 
 const app = express()
 app.use(json())
