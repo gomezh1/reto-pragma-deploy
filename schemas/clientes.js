@@ -1,4 +1,4 @@
-import z from 'zod'
+const z = require('zod')
 
 const clienteSchema = z.object({
   tipoDocumento: z.string({
@@ -39,10 +39,10 @@ const clienteSchema = z.object({
     required_error: 'edad ingreso is required' 
       }).positive().max(110),      
   genero: z.array(
-    (['M', 'F']),
+    z.enum(['M', 'F']),
     {
       required_error: 'genero  is required.',
-      invalid_type_error: 'genero  must be an array of enum'
+      invalid_type_error: 'genero  must be an array of enum Genre'
     }
   ),
   email: z.string().url({
@@ -50,12 +50,15 @@ const clienteSchema = z.object({
   }),
 })
 
-export function validatecliente (input) {
+function validatecliente (input) {
   return clienteSchema.safeParse(input)
 }
 
-export function validatePartialcliente (input) {
+function validatePartialcliente (input) {
   return clienteSchema.partial().safeParse(input)
 }
 
-
+module.exports = {
+  validatecliente,
+  validatePartialcliente
+}

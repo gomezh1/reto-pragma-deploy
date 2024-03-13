@@ -1,0 +1,29 @@
+[33mcommit e4a2f514b750448b73b5214b64e3dfdb405e7218[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Hebert Gustavo Gómez Quiroga <heggomez@bancolombia.com.co>
+Date:   Wed Mar 13 06:34:13 2024 -0500
+
+    Aplicar ajuste cors2
+
+[33mcommit b6abc5ea0632fcc117a2cd566fa32067fe62c491[m
+Author: Hebert Gustavo Gómez Quiroga <heggomez@bancolombia.com.co>
+Date:   Tue Mar 12 23:12:15 2024 -0500
+
+    Aplicar ajuste cors
+
+[33mcommit 9f70edc7f7468a0e516250164e9e69f85f79596a[m
+Author: Hebert Gustavo Gómez Quiroga <heggomez@bancolombia.com.co>
+Date:   Tue Mar 12 21:52:07 2024 -0500
+
+    Aplicar ajuste a module zod
+
+[33mcommit b07c1418025b2bfbdf85f75f86f77d5a9dfd53d4[m
+Author: Hebert Gustavo Gómez Quiroga <heggomez@bancolombia.com.co>
+Date:   Tue Mar 12 21:39:09 2024 -0500
+
+    Aplicar Esmac Script module
+
+[33mcommit 7e9542e23ee629e26668b6e1f8630f2d420010e1[m
+Author: Hebert Gustavo Gómez Quiroga <heggomez@bancolombia.com.co>
+Date:   Mon Mar 11 21:03:54 2024 -0500
+
+    Proyecto pragma

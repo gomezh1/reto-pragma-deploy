@@ -1,6 +1,6 @@
 import { randomUUID} from "express"
 import { Router } from "express"
-import { validatecliente, validatePartialcliente } from './schemas/clientes.js'
+import { validatecliente, validatePartialcliente } from './shemas/clientes.js'
 import clientes from './clientes.json' with {type:'json'}
 
 export const clienteRouter = Router()
@@ -38,8 +38,6 @@ clienteRouter.get('./:documento',(req, res) => {
       ...result.data
     }
   
-    // Esto no sería REST, porque estamos guardando
-    // el estado de la aplicación en memoria
     clientes.push(newcliente)
   
     res.status(201).json(newcliente)
@@ -81,3 +79,5 @@ clienteRouter.get('./:documento',(req, res) => {
   
     return res.json(updatecliente)
   })
+
+  

@@ -36,7 +36,7 @@
             const article = e.target.closest('article')
             const id = article.dataset.id
 
-            fetch(`http://localhost:1234/clientes/${documento}`, {
+            fetch(`http://localhost:3245/clientes/${documento}`, {
               method: 'DELETE'
             })
               .then(res => {

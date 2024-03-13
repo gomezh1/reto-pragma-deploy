@@ -34,5 +34,5 @@ PATCH http://localhost:3245/clientes/dcdd0fad-a94c-4810-8acc-5f108d3b18c17
 Content-Type: application/json
 
 {
-  "edad": 42
+  "edad": 38
 }
