@@ -1,12 +1,18 @@
-const express = require('express') // require -> commonJS
-const crypto = require('node:crypto')
-const cors = require('cors')
+import express, { json } from 'express' // require -> commonJS
+import { randomUUID } from 'node:crypto'
+import cors from 'cors'
 
-const clientes = require('./clientes.json')
-const { validatecliente, validatePartialcliente } = require('./schemas/clientes')
+import clientes from './clientes.json' with {type:'json'}
+import { validatecliente, validatePartialcliente } from './schemas/clientes.js'
+
+import {createRequire} from 'node:module'
+import { assert } from 'node:console'
+import {readJSON} from './utils.js'
+const require = createRequire(import.meta.url)
+const clientes = readJSON('./clientes.json')
 
 const app = express()
-app.use(express.json())
+app.use(json())
 app.use(cors({
   origin: (origin, callback) => {
     const ACCEPTED_ORIGINS = [
@@ -27,12 +33,6 @@ app.use(cors({
   }
 }))
 app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
-
-// métodos normales: GET/HEAD/POST
-// métodos complejos: PUT/PATCH/DELETE
-
-// CORS PRE-Flight
-// OPTIONS
 
 // Todos los recursos que sean clientes se identifica con /clientes
 app.get('/clientes', (req, res) => {
@@ -63,7 +63,7 @@ app.post('/clientes', (req, res) => {
 
   // en base de datos
   const newcliente = {
-    id: crypto.randomUUID(), // uuid v4
+    id: randomUUID(), // uuid v4
     ...result.data
   }
 
